@@ -1,0 +1,236 @@
+/* Import a Google Font */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f6fb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.content-wrapper {
+  flex: 1 0 auto;
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+
+body > header, body > .content-wrapper, body > footer {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: linear-gradient(90deg, #232946 0%, #394867 100%);
+  color: #f4f6fb;
+  padding: 18px 8px 12px 8px;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 2px 8px rgba(35,41,70,0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1 0 auto;
+  min-height: 0;
+  min-width: 0;
+}
+
+/* Sticky footer Flexbox solution */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.content-wrapper {
+  flex: 1 0 auto;
+}
+
+@media (min-width: 751px) {
+  .content-wrapper {
+    flex-direction: row;
+    gap: 18px;
+    min-height: 0;
+    flex: 1 0 auto;
+  }
+  nav {
+    max-width: 220px;
+    min-width: 160px;
+    flex: none;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    max-width: 100%;
+    margin-top: 0;
+    min-height: 100%;
+  }
+  header {
+    text-align: center;
+  }
+}
+
+nav {
+  background: #076ac1;
+  padding: 10px 6px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(35,41,70,0.06);
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+nav a {
+  text-decoration: none;
+  color: #232946;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+  margin: 0;
+}
+nav a:hover {
+  background: #232946;
+  color: #fff;
+}
+
+main {
+  background: #fff;
+  padding: 14px 8px;
+  margin-bottom: 0;
+  box-sizing: border-box;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(35,41,70,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+footer {
+  background: linear-gradient(90deg, #232946 0%, #394867 100%);
+  color: #f4f6fb;
+  padding: 10px 8px;
+  text-align: center;
+  border-radius: 12px 12px 0 0;
+  margin-top: 18px;
+  box-shadow: 0 -2px 8px rgba(35,41,70,0.08);
+}
+
+#calculator {
+  margin-top: 40px;
+  padding: 14px 8px;
+  background: linear-gradient(120deg, #e8eaf6 0%, #cfd8dc 100%);
+  border-radius: 14px;
+  max-width: 420px;
+  box-shadow: 0 2px 12px rgba(35,41,70,0.08);
+  color: #232946;
+}
+#calculator h2 {
+  margin-top: 0;
+  color: #232946;
+}
+#calculator input {
+  margin: 5px;
+  padding: 7px;
+  width: 120px;
+  border-radius: 6px;
+  border: 1px solid #b0b7c3;
+  font-size: 1em;
+  background: #f4f6fb;
+  color: #232946;
+}
+#calculator button {
+  margin: 5px 2px;
+  padding: 7px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #232946;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+#calculator button:hover {
+  background: #394867;
+  color: #fff;
+}
+#output {
+  margin-top: 12px;
+  font-size: 1.2em;
+  color: #232946;
+  background: #f4f6fb;
+  border-radius: 6px;
+  padding: 6px 0;
+}
+
+@media (max-width: 750px) {
+  .content-wrapper {
+    flex-direction: column;
+    min-height: 0;
+  }
+  nav ul {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  header {
+    text-align: center;
+  }
+  nav {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  main {
+    max-width: 100%;
+  }
+} 
